@@ -42,5 +42,8 @@ The learned latent transition is the active ingredient in zero of the six.
 
 **Writing** — [learning-in-loops.pages.dev](https://learning-in-loops.pages.dev)
 
+- [When Does a Latent World Model Actually Help? Six Regimes](https://learning-in-loops.pages.dev/posts/when-does-a-latent-world-model-help/)
+- [Every Dead End Named the Next Step: An I Ching World Model](https://learning-in-loops.pages.dev/posts/i-ching-world-model/)
+
 Negative results, reproduced and ablated. They are the part that saves the next
 person the weeks.
