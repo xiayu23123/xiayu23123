@@ -10,7 +10,7 @@
 
 | 项目 | 是什么 | 关键数字 |
 |---|---|---|
-| **岐黄典籍 · 测算师**（小程序，已上线运营） | 术数/中医典籍 RAG 问答产品：「程序管事实、模型管语言」闸门架构，每句结论强制带出典籍出处 | 36 万段语料 · 1,800+ 项测试 · 14 次上线零回滚 · Web/Windows/Android/小程序多端 |
+| **岐黄典籍 · 测算师**（小程序，已上线运营） | 术数/中医典籍 RAG 问答产品：「程序管事实、模型管语言」闸门架构，每句结论强制带出典籍出处（引文闸门思路已在开源项目 [citation-gate](https://github.com/xiayu23123/citation-gate) 中重新实现，不含产品代码） | 36 万段语料 · 1,800+ 项测试 · 14 次上线零回滚 · Web/Windows/Android/小程序多端 |
 | **体质调理**（商业化推进中） | 基于 GB/T 46939—2025 九体质分类的自测与调理内容服务，执业中医师审定内容后发布 | 小程序功能已上线 · 会员制付费链路设计中 |
 | **Agent 劳务市场**（MVP） | 多模型任务执行平台：委托撮合、双模型并行执行、人工放行、熔断与积分结算 | 224 项数据库测试 · Vercel/Railway/Supabase 全栈部署 |
 | **小说数据底座** | 三平台小说采集→去重→结构原子化流水线，支撑内容生成实验 | 75,358 书库候选 · 4,550 章节快照 · 10,149 结构原子 |
@@ -22,6 +22,7 @@
 
 - [lorenz-world-model](https://github.com/xiayu23123/lorenz-world-model) — learned latent transition 到底有没有用？六组对照实验，答案是诚实的负结果
 - [yi-world-model](https://github.com/xiayu23123/yi-world-model) — 易经结构拓扑上的可微世界模型，含全部失败记录
+- [citation-gate](https://github.com/xiayu23123/citation-gate) — 检查 LLM 回答里引用的古籍原文是否真在书中（CLI / Python 库 / GitHub Action）。50 条改了关键字的引文（寒→热、漏掉「不」），纯模糊匹配全部放过；改为比对差异后全部拦下，仍会漏的是词表外的药名替换
 - [learning-in-loops](https://github.com/xiayu23123/learning-in-loops) — 博客与写作：[learning-in-loops.pages.dev](https://learning-in-loops.pages.dev)
 
 ---
@@ -62,6 +63,10 @@ The learned latent transition is the active ingredient in zero of the six.
 
 - [When Does a Latent World Model Actually Help? Six Regimes](https://learning-in-loops.pages.dev/posts/when-does-a-latent-world-model-help/)
 - [Every Dead End Named the Next Step: An I Ching World Model](https://learning-in-loops.pages.dev/posts/i-ching-world-model/)
+
+The same habit outside world models: [citation-gate](https://github.com/xiayu23123/citation-gate)
+checks the passages an LLM answer quotes against classical Chinese sources,
+and on its benchmark plain fuzzy matching passes 50 of 50 meaning-changing edits.
 
 Negative results, reproduced and ablated. They are the part that saves the next
 person the weeks.
